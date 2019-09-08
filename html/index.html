@@ -1,0 +1,129 @@
+<html>
+<head>
+  <title>Zee Slag</title>
+  <script type="text/javascript">
+function createPlayer (name) {
+  var player   = new Object()
+  player.name  = name
+  player.score = 6
+  player.bord  = [[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]]
+  player.boten = []
+
+  player.zetBootOpBord = function zetBootOpBord (boot) {
+    for(var i = 0; i < boot.length; i++) {
+      var coordinaten = boot[i]
+      var x = coordinaten[0]// index  0  = [0,0]
+      var y = coordinaten[1]
+      this.bord[x][y] = "x"
+    }
+  }
+
+  player.zetBoten = function zetBoten(boten){
+    for(var i = 0; i < boten.length; i++){
+      var boot = boten[i]
+      this.zetBootOpBord(boot)
+    }
+  }
+
+  player.score = 6
+
+  player.shoot = function shoot (co, bord) {
+    var x = co[0]
+    var y = co[1]
+    var target = bord[x][y]
+    if (target === 'x') {
+      console.log('raak')
+      bord[x][y] = 0
+      this.bord[x][y] = this.bord[x][y] + "+"
+      this.score = this.score - 1
+    } else {
+      console.log('mis')
+      this.bord[x][y] = this.bord[x][y] + "-" 
+    }
+  }
+
+  player.printBord = function print() {
+    var lijn = ""
+    var bord = ""
+
+    for (var i = 0; i < this.bord.length * 4; i++) {
+        lijn = lijn + "-"
+    }
+
+    console.log(lijn) // boven
+    for (var i = 0; i < this.bord.length; i++) {
+      bord = ""
+      for (var k = 0; k < this.bord.length; k++){
+        bord = bord + "| " + this.bord[i][k] + " "
+      }
+      bord = bord + " |"
+      console.log(bord)
+    }
+    console.log(lijn) // onder
+
+  }
+
+
+  return player
+}
+
+var aantalboten = 3
+var players =[]
+
+
+// 
+// var naam = prompt("Wat is uw naam?");
+// if (naam == "" || naam == null) {
+//     naam = 'player1'
+//     players.push(createPlayer(naam))
+// } else {
+//     players.push(createPlayer(naam))
+// }
+
+
+
+while(true){
+  if (players.length < 2) {
+    var naam = prompt("Wat is uw naam?");
+	if (naam == "" || naam == null) {
+	    naam = 'player1'
+	    players.push(createPlayer(naam))
+	} else {
+	    players.push(createPlayer(naam))
+	}
+
+	
+	// for elke speler
+	for (var i = 0; i < players.length; i++) {
+		// for elke boot 
+		for (var j = 0; j < aantalboten ; j++) {
+        var boot = prompt("Waar staat boot " + (j + 1)  + "?");
+		players[i].boten.push(boot)
+		}
+	}
+		// alle coordinaten ingeven
+  }
+
+  if (players.length  === 2) {	
+	for (var i = 0; i < players.length; i++) {
+		console.log( players[i])
+		alert( players[i].name)
+	}	
+	break
+  }
+  
+}
+
+  </script>
+</head>
+<body>
+</body>
+</html>
+
+
+
+
+
+
+
+
