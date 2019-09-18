@@ -64,10 +64,13 @@ function betaberekenen(a,b,c) {
   return B
 }
 
-function nulwaarde2 (D,a,b) {
-  var na =(Math.pow(-b,2)+ Math.sqrt(D)/2*a
-  var nb =(Math.pow(-b,2)- Math.sqrt(D)/2*a
+function nulwaarde1 (D,a,b) {
+  var na =(Math.pow(-b,2)+ Math.sqrt(D))/2*a
   return na
+ }
+
+function nulwaarde2 (D,a,b) {
+  var nb =(Math.pow(-b,2)- Math.sqrt(D))/2*a
   return nb
  }
 
@@ -82,8 +85,7 @@ function discriminant(a,b,c) {
     console.log(A + "1 nulwaarde")
     }  
     else {
-    nulwaarde2 (D,a,b)
-    console.log(na +  nb "2 nulwaarde")
+    console.log(nulwaarde1(D,a,b) + nulwaarde2 (D,a,b) "2 nulwaarde")
   }
  
   return D
