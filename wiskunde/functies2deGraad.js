@@ -55,7 +55,38 @@ console.log(tweedeGraads(1,3,3,2)===2)
 console.log(kenmerken(1,3,3,2))
 
 
+function alfaBerekenen(a,b) {
+  var A = -b/(2*a)
+  return A
+}
+function betaberekenen(a,b,c) {
+  var B = (Math.pow(-b,2)+ 4*a*c)/4*a
+  return B
+}
 
+function nulwaarde2 (D,a,b) {
+  var na =(Math.pow(-b,2)+ Math.sqrt(D)/2*a
+  var nb =(Math.pow(-b,2)- Math.sqrt(D)/2*a
+  return na
+  return nb
+ }
+
+function discriminant(a,b,c) {
+  var D = Math.pow(-b,2)- 4*a*c
+  if D < 0 {
+    console.log("geen wortel")
+  }
+  else {
+    if (D===0) {
+    function alfaBerekenen(a,b)
+    console.log(A + "1 nulwaarde")
+    }  
+    else {
+    nulwaarde2 (D,a,b)
+    console.log(na +  nb "2 nulwaarde")
+  }
+ 
+  return D
 
 
 
