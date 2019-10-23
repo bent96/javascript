@@ -83,6 +83,7 @@ function discriminant(a,b,c) {
     if (D===0) {
     alfaBerekenen(a,b)
     console.log(A + "1 nulwaarde")
+    } 
     }  
     else {
     console.log(nulwaarde1(D,a,b) + nulwaarde2 (D,a,b) +"2 nulwaarde")
