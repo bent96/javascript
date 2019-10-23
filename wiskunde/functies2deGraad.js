@@ -90,6 +90,6 @@ function discriminant(a,b,c) {
  
   return D
 
-
-
+}
+console.log("Het werkt")
 
