@@ -85,7 +85,7 @@ function discriminant(a,b,c) {
     console.log(A + "1 nulwaarde")
     }  
     else {
-    console.log(nulwaarde1(D,a,b) + nulwaarde2 (D,a,b) "2 nulwaarde")
+    console.log(nulwaarde1(D,a,b) + nulwaarde2 (D,a,b) +"2 nulwaarde")
   }
  
   return D
