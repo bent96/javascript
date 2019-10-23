@@ -76,7 +76,7 @@ function nulwaarde2 (D,a,b) {
 
 function discriminant(a,b,c) {
   var D = Math.pow(-b,2)- 4*a*c
-  if D < 0 {
+  if D < 0 
     console.log("geen wortel")
   }
   else {
