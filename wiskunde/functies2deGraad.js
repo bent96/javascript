@@ -92,5 +92,5 @@ function discriminant(a,b,c) {
   return D
 
 }
-console.log("Het werkt")
-
+//console.log("Het werkt")
+print ("kflkfds")
