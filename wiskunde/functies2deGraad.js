@@ -51,8 +51,8 @@ functieId.push("SpiegelAs =" + A )
 functieId.push("Nulwaarde =" + nulwaardeTweede(a,A,B) )
 return functieId
 }
-console.log(tweedeGraads(1,3,3,2)===2)
-console.log(kenmerken(1,3,3,2))
+//console.log(tweedeGraads(1,3,3,2)===2)
+//console.log(kenmerken(1,3,3,2))
 
 
 function alfaBerekenen(a,b) {
