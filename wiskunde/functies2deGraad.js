@@ -93,4 +93,4 @@ function discriminant(a,b,c) {
 
 }
 //console.log("Het werkt")
-print ("kflkfds")
+
