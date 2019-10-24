@@ -94,4 +94,4 @@ function discriminant(a,b,c) {
 }
 //console.log("Het werkt")
 
-console.log("Hello world!");
+log("Hello world!");
